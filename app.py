@@ -3,6 +3,12 @@ from pymongo import MongoClient
 import os
 import base64
 from bson.objectid import ObjectId
+import os
+
+port = int(os.environ.get("PORT", 5000))
+
+app.run(host="0.0.0.0", port=port)
+
 
 app = Flask(__name__)
 app.secret_key = "your_secret_key"  # Required for session handling
