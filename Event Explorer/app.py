@@ -25,7 +25,7 @@ ADMIN_CREDENTIALS = {"username": "admin", "password": "admin123"}
 def index():
     """Home page - List of all events"""
     events = events_collection.find()
-    return render_template("/index.html", events=events)
+    return render_template("index.html", events=events)
 
 @app.route("/event/<event_id>")
 def event_detail(event_id):
